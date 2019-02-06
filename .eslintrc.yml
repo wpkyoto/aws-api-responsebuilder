@@ -1,0 +1,24 @@
+extends:
+  - standard
+  - plugin:@typescript-eslint/recommended
+plugins:
+  - "@typescript-eslint"
+
+parser: "@typescript-eslint/parser"
+env:
+  es6: true
+  node: true
+parserOptions:
+  sourceType: 'module'
+  ecmaFeatures:
+    ts: true
+globals:
+  describe: false
+  it: false
+  beforeEach: false
+  afterEach: false
+  beforeAll: false
+  afterAll: false
+  jasmine: false
+rules:
+  "@typescript-eslint/class-name-casing": off
