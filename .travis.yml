@@ -6,9 +6,11 @@ install:
 script:
   - yarn run lint
   - yarn test
+before_deploy:
   - yarn run build
 deploy:
   provider: npm
+  skip_cleanup: true
   email: 'info@wp-kyoto.net'
   api_key: $NPM_TOKEN
   on:
