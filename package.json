@@ -1,6 +1,6 @@
 {
   "name": "aws-api-responsebuilder",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "API gateway response builder",
   "main": "dist/index.js",
   "scripts": {
