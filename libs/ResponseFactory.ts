@@ -1,6 +1,6 @@
 import { APIGatewayProxyResult } from 'aws-lambda'
 import { ResponseBuilder } from './ResponseBuilder'
-export default class ResponseFactory {
+export class ResponseFactory {
     public static init (): ResponseBuilder {
         const response: APIGatewayProxyResult = {
             statusCode: 500,
@@ -41,3 +41,4 @@ export default class ResponseFactory {
         }
     }
 }
+export default ResponseFactory

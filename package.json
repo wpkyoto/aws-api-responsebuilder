@@ -4,7 +4,9 @@
   "description": "API gateway response builder",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "prepare": "npm run build",
+    "build": "rollup -c",
+    "tsc": "tsc",
     "test": "jest",
     "doc": "typedoc --out docs libs/",
     "lint": "eslint 'libs/**/*.{ts,tsx}'",
@@ -42,6 +44,8 @@
     "husky": "^1.3.1",
     "aws-sdk": "^2.387.0",
     "jest": "^23.6.0",
+    "rollup": "^1.12.3",
+    "rollup-plugin-typescript2": "^0.20.1",
     "ts-jest": "^23.10.5",
     "typedoc": "^0.14.1",
     "typescript": "^3.2.2"

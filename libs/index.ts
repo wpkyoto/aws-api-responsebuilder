@@ -1,17 +1,20 @@
-import { ResponseBuilder } from './ResponseBuilder'
+import * as builderInterface from './ResponseBuilder'
 import ResponseFactory from './ResponseFactory'
 
+export * from './ResponseFactory'
+
+export const ResponseBuilder = ResponseFactory.init()
+
 export interface interfaces {
-    ResponseBuilder: ResponseBuilder;
-    ResponseFactory: ResponseBuilder;
+    ResponseBuilder: builderInterface.ResponseBuilder;
 }
 
 export default {
     ResponseFactory,
-    ResponseBuilder: ResponseFactory.init()
+    ResponseBuilder
 }
 
 module.exports = {
     ResponseFactory,
-    ResponseBuilder: ResponseFactory.init()
+    ResponseBuilder
 }

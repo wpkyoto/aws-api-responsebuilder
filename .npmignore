@@ -14,3 +14,4 @@ tsconfig.json
 README.md
 yarn.lock
 examples/
+.rpt2_cache/
