@@ -8,7 +8,7 @@
     "build": "rollup -c",
     "tsc": "tsc",
     "test": "jest",
-    "doc": "typedoc --out docs libs/",
+    "doc": "typedoc --out docs libs/ && touch docs/.nojekyll",
     "lint": "eslint 'libs/**/*.{ts,tsx}'",
     "test:watch": "jest --watch",
     "test:dev": "jest --watch --silent=false --verbose false --coverage"

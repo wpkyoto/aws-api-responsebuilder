@@ -15,3 +15,4 @@ README.md
 yarn.lock
 examples/
 .rpt2_cache/
+ogp_*.png
