@@ -2,6 +2,8 @@
 [![Build Status](https://travis-ci.org/hideokamoto/aws-api-responsebuilder.svg?branch=master)](https://travis-ci.org/hideokamoto/aws-api-responsebuilder)
 [![npm version](https://badge.fury.io/js/aws-api-responsebuilder.svg)](https://badge.fury.io/js/aws-api-responsebuilder)
 
+![logo](./ogp_dark.png)
+
 ## Getting started
 ```
 $ npm i -S aws-api-responsebuilder
