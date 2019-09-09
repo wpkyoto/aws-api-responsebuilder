@@ -10,6 +10,8 @@
     "test": "jest",
     "doc": "typedoc --out docs libs/ && touch docs/.nojekyll",
     "lint": "eslint 'libs/**/*.{ts,tsx}'",
+    "postversion": "npm run push:tag",
+    "push:tag": "git push origin $(git describe --abbrev=0 --tags)",
     "test:watch": "jest --watch",
     "test:dev": "jest --watch --silent=false --verbose false --coverage"
   },
