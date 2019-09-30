@@ -21,4 +21,5 @@ globals:
   afterAll: false
   jasmine: false
 rules:
+  "@typescript-eslint/no-namespace": off
   "@typescript-eslint/class-name-casing": off

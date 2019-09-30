@@ -5,8 +5,8 @@ export * from './ResponseFactory'
 
 export const ResponseBuilder = ResponseFactory.init()
 
-export interface interfaces {
-    ResponseBuilder: builderInterface.ResponseBuilder;
+export namespace interfaces {
+    export type ResponseBuilder = builderInterface.ResponseBuilder;
 }
 
 export default {
