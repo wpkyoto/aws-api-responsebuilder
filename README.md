@@ -28,3 +28,15 @@ console.log(ResponseBuilder.getResponse())
      'Access-Control-Allow-Credentials': true },
   body: '{"message":"Invalid Request","code":"invalid_request"}' }
 ```
+
+## TypeScript
+
+```
+const ResponseBuilder = ResponseFactory.init<string, {"x-header1": string}>()
+
+ResponseBuilder
+  .putHeaders({
+      "x-header1": "",
+  })
+  .setBody('message')
+```

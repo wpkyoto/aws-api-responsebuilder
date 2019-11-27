@@ -1,7 +1,7 @@
 import { APIGatewayProxyResult } from 'aws-lambda'
-import { ResponseBuilder } from './ResponseBuilder'
+import { ResponseBuilder, APIGatewayResponseHeaders } from './ResponseBuilder'
 export class ResponseFactory {
-    public static init (): ResponseBuilder {
+    public static init<Body = any, Headers extends APIGatewayResponseHeaders = APIGatewayResponseHeaders> (): ResponseBuilder<Body, Headers> {
         const response: APIGatewayProxyResult = {
             statusCode: 500,
             headers: {
@@ -13,11 +13,11 @@ export class ResponseFactory {
             })
         }
         return {
-            setStatusCode (code: number): ResponseBuilder {
+            setStatusCode (code: number): ResponseBuilder<Body, Headers> {
                 response.statusCode = code
                 return this
             },
-            updateHeader (key: string, value: string): ResponseBuilder {
+            updateHeader (key: string, value: string): ResponseBuilder<Body, Headers> {
                 if (!response.headers) {
                     response.headers = {
                         [key]: value
@@ -27,12 +27,17 @@ export class ResponseFactory {
                 }
                 return this
             },
-            putHeaders (headers: {}): ResponseBuilder {
+            putHeaders (headers: Headers): ResponseBuilder<Body, Headers> {
                 response.headers = headers
                 return this
             },
-            setBody (body: {}): ResponseBuilder {
-                response.body = JSON.stringify(body)
+            setBody (body?: Body): ResponseBuilder<Body, Headers> {
+                if (!body) return this.unsetBody()
+                response.body = typeof body !== 'string' ? JSON.stringify(body) : body
+                return this
+            },
+            unsetBody (): ResponseBuilder<Body, Headers> {
+                delete response.body
                 return this
             },
             getResponse (): APIGatewayProxyResult {

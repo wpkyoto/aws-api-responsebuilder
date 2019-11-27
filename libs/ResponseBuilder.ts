@@ -1,9 +1,13 @@
 import { APIGatewayProxyResult } from 'aws-lambda'
 
-export interface ResponseBuilder {
-    setStatusCode(code: number): ResponseBuilder;
-    updateHeader(key: string, value: string): ResponseBuilder;
-    putHeaders(headers: {}): ResponseBuilder;
-    setBody(body: {}): ResponseBuilder;
+export interface APIGatewayResponseHeaders {
+    [header: string]: boolean | number | string;
+}
+export interface ResponseBuilder<Body = any, Headers extends APIGatewayResponseHeaders = APIGatewayResponseHeaders> {
+    setStatusCode(code: number): ResponseBuilder<Body, Headers>;
+    updateHeader(key: string, value: string): ResponseBuilder<Body, Headers>;
+    putHeaders(headers: Headers): ResponseBuilder<Body, Headers>;
+    setBody(body?: Body): ResponseBuilder<Body, Headers>;
+    unsetBody(): ResponseBuilder<Body, Headers>;
     getResponse(): APIGatewayProxyResult;
 }
