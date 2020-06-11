@@ -21,11 +21,11 @@
     "api gateway"
   ],
   "bugs": {
-    "url": "https://github.com/hideokamoto/aws-api-responsebuilder/issues"
+    "url": "https://github.com/wpkyoto/aws-api-responsebuilder/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hideokamoto/aws-api-responsebuilder.git"
+    "url": "https://github.com/wpkyoto/aws-api-responsebuilder.git"
   },
   "author": "Hidetaka Okamoto <info@wp-kyoto.net> (https://wp-kyoto.net)",
   "license": "MIT",
