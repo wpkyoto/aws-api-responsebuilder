@@ -1,6 +1,6 @@
 {
   "name": "aws-api-responsebuilder",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "API gateway response builder",
   "main": "dist/index.js",
   "scripts": {
@@ -13,7 +13,8 @@
     "postversion": "npm run push:tag",
     "push:tag": "git push origin $(git describe --abbrev=0 --tags)",
     "test:watch": "jest --watch",
-    "test:dev": "jest --watch --silent=false --verbose false --coverage"
+    "test:dev": "jest --watch --silent=false --verbose false --coverage",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "aws",
@@ -21,11 +22,11 @@
     "api gateway"
   ],
   "bugs": {
-    "url": "https://github.com/hideokamoto/aws-api-responsebuilder/issues"
+    "url": "https://github.com/wpkyoto/aws-api-responsebuilder/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hideokamoto/aws-api-responsebuilder.git"
+    "url": "https://github.com/wpkyoto/aws-api-responsebuilder.git"
   },
   "author": "Hidetaka Okamoto <info@wp-kyoto.net> (https://wp-kyoto.net)",
   "license": "MIT",
@@ -48,6 +49,7 @@
     "lint-staged": "8.2.1",
     "rollup": "1.21.2",
     "rollup-plugin-typescript2": "0.20.1",
+    "semantic-release": "^17.0.8",
     "ts-jest": "23.10.5",
     "typedoc": "0.14.2",
     "typescript": "3.6.2"
