@@ -31,7 +31,7 @@
   "author": "Hidetaka Okamoto <info@wp-kyoto.net> (https://wp-kyoto.net)",
   "license": "MIT",
   "devDependencies": {
-    "@types/aws-lambda": "8.10.59",
+    "@types/aws-lambda": "8.10.77",
     "@types/jest": "26.0.7",
     "@types/node": "10.17.26",
     "@typescript-eslint/eslint-plugin": "3.7.0",
