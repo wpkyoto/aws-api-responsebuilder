@@ -33,7 +33,7 @@
   "devDependencies": {
     "@types/aws-lambda": "8.10.137",
     "@types/jest": "26.0.24",
-    "@types/node": "10.17.60",
+    "@types/node": "20.17.0",
     "@typescript-eslint/eslint-plugin": "3.7.0",
     "@typescript-eslint/parser": "3.7.0",
     "@typescript-eslint/typescript-estree": "3.7.0",
